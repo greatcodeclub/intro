@@ -26,6 +26,7 @@ function Admin(name) {
   this.admin = true
 }
 
+// Make Admin inherit from User
 Admin.prototype = Object.create(User.prototype)
 Admin.prototype.constructor
 // => [Function: User]

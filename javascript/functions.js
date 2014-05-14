@@ -14,7 +14,6 @@ object.add = function(a, b) {
 }
 
 object.name = 'object'
-name = 'global'
 
 // The value of `this`
 object.getName = function() {
@@ -25,11 +24,14 @@ object.getName()
 
 var getName = object.getName
 getName()
-// => global
+// => undefined
+getName.call(object, 'arg1')
+// => object
+getName.apply(object, ['arg1'])
+// => object
 
 
 // Binding `this`
-
 object.printNameLater = function() {
   var self = this
   setTimeout(function() {

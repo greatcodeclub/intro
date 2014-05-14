@@ -1,6 +1,22 @@
 // Variables
 var name = 'value', num = 1
 
+// var a === undefined
+var a = null // Define it as having no value
+
+// Conditionals
+if (a) {
+  console.log(a, 'is truthy')
+} else {
+  console.log(a, 'is falsy')
+}
+// => undefined is falsy
+// => null is falsy
+// => false is falsy
+// => true is truthy
+// => 1 is truthy
+
+
 // Objects
 var object = {}
 
@@ -16,6 +32,7 @@ var object = {
   name: 'Bob',
   age: 33
 }
+
 
 // Arrays
 var array = [1, 2, 3]
