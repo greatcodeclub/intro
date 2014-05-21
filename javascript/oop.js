@@ -1,3 +1,4 @@
+// Constructor function
 function User(name) {
   this.name = name
 }
@@ -21,6 +22,7 @@ user.maxNameLength
 // => 100
 
 
+// Inheritance
 function Admin(name) {
   User.call(this, name)
   this.admin = true
@@ -35,3 +37,9 @@ Admin.prototype.constructor = Admin
 var admin = new Admin('Bob')
 admin
 // => { name: 'Bob', admin: true }
+
+// Overriding methods
+Admin.prototype.save = function() {
+  User.prototype.save.apply(this)
+  // ...
+}
